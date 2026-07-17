@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useState } from "react";
-import { getPropertyBySlug } from "@/data/properties";
+import { getPropertyBySlug, type Property } from "@/data/properties";
 import { Lightbox } from "@/components/Lightbox";
 import { toEmbedUrl, isDirectVideoFile } from "@/lib/media";
 
@@ -42,7 +42,7 @@ export const Route = createFileRoute("/properties/$slug")({
 });
 
 function PropertyDetail() {
-  const { property } = Route.useLoaderData();
+  const { property } = Route.useLoaderData() as { property: Property };
   const [lightbox, setLightbox] = useState<{ open: boolean; index: number }>({
     open: false,
     index: 0,
