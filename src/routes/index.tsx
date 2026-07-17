@@ -6,17 +6,17 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "DigiRise — Real Estate Media, Melbourne" },
+      { title: "DigiRise - Real Estate Photography in Sydney" },
       {
         name: "description",
         content:
           "Premium real estate photography, drone, and 360° Matterport tours by Simon at DigiRise. Based in Melbourne, shooting Australia-wide.",
       },
-      { property: "og:title", content: "DigiRise — Real Estate Media" },
+      { property: "og:title", content: "DigiRise - Real Estate Photography in Sydney" },
       {
         property: "og:description",
         content:
-          "Photography, drone, and 360° Matterport tours for high-end property listings.",
+          "Premium real estate photography, drone, and 360° Matterport tours by Simon at DigiRise. Based in Melbourne, shooting Australia-wide.",
       },
       { property: "og:url", content: "/" },
     ],
