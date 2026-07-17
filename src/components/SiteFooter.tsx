@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/digirise-logo.png.asset.json";
+import logo from "@/assets/digirise-logo.png?url";
 
 export function SiteFooter() {
   return (
@@ -9,7 +9,7 @@ export function SiteFooter() {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <img
-                src={logo.url}
+                src={logo}
                 alt="DigiRise"
                 width={40}
                 height={40}
@@ -61,7 +61,7 @@ export function SiteFooter() {
               ABN 82 302 930 360
             </p>
             <p className="text-[10px] uppercase tracking-[0.2em] text-brand-black/40">
-              Melbourne, AU
+              Sydney, AU
             </p>
             <p className="text-[10px] uppercase tracking-[0.2em] text-brand-black/30 pt-4">
               © {new Date().getFullYear()} DigiRise Media

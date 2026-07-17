@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/digirise-logo.png.asset.json";
+import logo from "@/assets/digirise-logo.png?url";
 
 export function SiteHeader() {
   return (
@@ -7,7 +7,7 @@ export function SiteHeader() {
       <nav className="flex items-center justify-between px-6 py-4 md:px-10 md:py-5">
         <Link to="/" className="flex items-center gap-3 group">
           <img
-            src={logo.url}
+            src={logo}
             alt="DigiRise"
             width={40}
             height={40}

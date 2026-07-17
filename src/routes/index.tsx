@@ -61,7 +61,7 @@ function Index() {
                 <p className="text-[10px] uppercase tracking-[0.3em] text-brand-black/50">
                   Based in
                 </p>
-                <p className="mt-2 text-sm">Melbourne, Australia</p>
+                <p className="mt-2 text-sm">Sydney, Australia</p>
               </div>
             </div>
           </div>
