@@ -78,26 +78,26 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "DigiRise - Real Estate Photography in Sydney" },
+      { title: "DigiRise — Real Estate Photography, Sydney" },
       {
         name: "description",
         content:
-          "Premium real estate photography, drone, and 360° Matterport tours by Simon at DigiRise. Based in Melbourne, shooting Australia-wide.",
+          "Premium real estate photography, drone, and 360° Matterport tours. Based in Sydney.",
       },
       { name: "author", content: "DigiRise" },
       { property: "og:site_name", content: "DigiRise" },
       { property: "og:type", content: "website" },
-      { property: "og:title", content: "DigiRise - Real Estate Photography in Sydney" },
+      { property: "og:title", content: "DigiRise — Real Estate Photography, Sydney" },
       {
         property: "og:description",
         content:
-          "Premium real estate photography, drone, and 360° Matterport tours by Simon at DigiRise. Based in Melbourne, shooting Australia-wide.",
+          "Premium real estate photography, drone, and 360° Matterport tours. Based in Sydney.",
       },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "DigiRise - Real Estate Photography in Sydney" },
-      { name: "twitter:description", content: "Premium real estate photography, drone, and 360° Matterport tours by Simon at DigiRise. Based in Melbourne, shooting Australia-wide." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3de7df1b-f8b5-4478-8fce-511449988fc4/id-preview-f3da61c1--cc0a5f5d-05f1-4a28-b0c5-20c431f47152.lovable.app-1784292609135.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3de7df1b-f8b5-4478-8fce-511449988fc4/id-preview-f3da61c1--cc0a5f5d-05f1-4a28-b0c5-20c431f47152.lovable.app-1784292609135.png" },
+      { name: "twitter:title", content: "DigiRise — Real Estate Photography, Sydney" },
+      { name: "twitter:description", content: "Premium real estate photography, drone, and 360° Matterport tours. Based in Sydney." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9039b1c8-908d-46bb-9eac-fb46996bfa28/id-preview-bbfce025--cc0a5f5d-05f1-4a28-b0c5-20c431f47152.lovable.app-1784295041716.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9039b1c8-908d-46bb-9eac-fb46996bfa28/id-preview-bbfce025--cc0a5f5d-05f1-4a28-b0c5-20c431f47152.lovable.app-1784295041716.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -107,6 +107,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap",
       },
+      { rel: "icon", type: "image/png", href: "/__l5e/assets-v1/b76ecdd3-d52a-4ae2-a6c7-6fb73b609a4d/digirise-logo.png" },
     ],
   }),
   shellComponent: RootShell,
