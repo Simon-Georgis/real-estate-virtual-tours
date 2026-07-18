@@ -20,7 +20,7 @@ function NotFoundComponent() {
     <div className="flex min-h-screen items-center justify-center bg-brand-cream px-4">
       <div className="max-w-md text-center">
         <p className="text-[10px] uppercase tracking-[0.3em] text-brand-gold">Error 404</p>
-        <h1 className="mt-4 font-serif text-5xl italic text-brand-black">Page not found</h1>
+        <h1 className="mt-4 font-serif text-xl leading-[1.35] italic text-brand-black md:text-2xl lg:text-3xl">Page not found</h1>
         <p className="mt-4 text-sm text-brand-black/60">
           The page you're looking for doesn't exist or has been moved.
         </p>
@@ -48,7 +48,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
     <div className="flex min-h-screen items-center justify-center bg-brand-cream px-4">
       <div className="max-w-md text-center">
         <p className="text-[10px] uppercase tracking-[0.3em] text-brand-gold">Something broke</p>
-        <h1 className="mt-4 font-serif text-4xl italic text-brand-black">
+        <h1 className="mt-4 font-serif text-xl leading-[1.35] italic text-brand-black md:text-2xl lg:text-3xl">
           This page didn't load
         </h1>
         <p className="mt-4 text-sm text-brand-black/60">

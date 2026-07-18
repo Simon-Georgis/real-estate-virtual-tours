@@ -48,36 +48,23 @@ const SERVICES = [
 function ServicesPage() {
   return (
     <>
-      <section className="px-6 pt-16 pb-8 md:px-10 md:pt-24 md:pb-12">
-        <div className="mx-auto max-w-7xl">
-          <p className="text-[10px] uppercase tracking-[0.3em] text-brand-gold">
-            What we offer
-          </p>
-          <h1 className="mt-4 max-w-3xl font-serif text-5xl md:text-7xl leading-[1.05]">
-            Precision <span className="italic">media</span> for premium listings.
-          </h1>
-          <p className="mt-6 max-w-xl text-brand-black/70 leading-relaxed">
-            A tight, considered set of services — the tools most agents actually need to
-            sell a property faster.
-          </p>
-        </div>
-      </section>
+      
 
       <section className="border-t border-brand-black/5 px-6 py-16 md:px-10 md:py-24">
         <div className="mx-auto grid max-w-7xl gap-x-12 gap-y-16 md:grid-cols-2">
           {SERVICES.map((s) => (
             <div key={s.number} className="border-t border-brand-black/10 pt-8">
               <p className="mb-4 font-serif text-sm italic text-brand-gold">{s.number}</p>
-              <h3 className="font-serif text-2xl md:text-3xl">{s.title}</h3>
+              <h3 className="font-serif text-xl leading-[1.35] md:text-2xl lg:text-3xl">{s.title}</h3>
               <p className="mt-4 text-brand-black/70 leading-relaxed">{s.body}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="bg-brand-black px-6 py-24 text-brand-cream md:px-10">
+      <section className="bg-brand-black px-6 py-16 text-brand-cream md:px-10">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="font-serif text-4xl italic md:text-5xl">
+          <h2 className="font-serif text-xl leading-[1.35] italic md:text-2xl lg:text-3xl">
             Ready to book a shoot?
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-brand-cream/60">

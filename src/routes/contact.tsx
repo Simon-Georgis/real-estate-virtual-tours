@@ -44,7 +44,7 @@ function ContactPage() {
           <p className="text-[10px] uppercase tracking-[0.3em] text-brand-gold">
             Get in touch
           </p>
-          <h1 className="mt-4 max-w-3xl font-serif text-5xl md:text-7xl leading-[1.05]">
+          <h1 className="mt-4 max-w-3xl font-serif text-xl leading-[1.35] md:text-2xl lg:text-3xl">
             Let's shoot your <span className="italic">next</span> listing.
           </h1>
           <p className="mt-6 max-w-xl text-brand-black/70 leading-relaxed">
@@ -104,7 +104,7 @@ function ContactPage() {
 
       <section className="bg-white px-6 py-20 md:px-10">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="font-serif text-3xl italic md:text-4xl text-brand-black">
+          <h2 className="font-serif text-xl leading-[1.35] italic md:text-2xl lg:text-3xl text-brand-black">
             Prefer email?
           </h2>
           <p className="mt-4 text-brand-black/60">

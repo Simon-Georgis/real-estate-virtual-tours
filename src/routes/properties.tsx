@@ -30,7 +30,7 @@ function PropertiesPage() {
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 max-w-2xl">
           <p className="text-[10px] uppercase tracking-[0.3em] text-brand-gold">Portfolio</p>
-          <h1 className="mt-4 font-serif text-5xl md:text-7xl leading-[1.05]">
+          <h1 className="mt-4 font-serif text-xl leading-[1.35] md:text-2xl lg:text-3xl">
             Properties.
           </h1>
           <p className="mt-6 text-brand-black/70 leading-relaxed">

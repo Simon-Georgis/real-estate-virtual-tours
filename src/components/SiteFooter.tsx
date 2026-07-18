@@ -3,7 +3,7 @@ import logo from "@/assets/digirise-logo.png?url";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-brand-black/10 bg-brand-cream px-6 py-16 md:px-10 md:py-20">
+    <footer className="border-t border-brand-black/10 bg-brand-cream px-6 py-12 md:px-10 md:py-16">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-12 md:grid-cols-3 md:gap-16">
           <div>
@@ -18,7 +18,7 @@ export function SiteFooter() {
               />
               <span className="font-serif text-xl italic tracking-tight">DigiRise</span>
             </div>
-            <h3 className="font-serif text-2xl md:text-3xl italic leading-tight text-balance">
+            <h3 className="font-serif text-xl leading-[1.35] md:text-2xl lg:text-3xl italic leading-tight text-balance">
               Ready to elevate your next listing?
             </h3>
             <p className="mt-4 max-w-xs text-sm text-brand-black/60 leading-relaxed">
@@ -71,7 +71,7 @@ export function SiteFooter() {
 
         <div
           aria-hidden="true"
-          className="mt-16 text-[18vw] font-serif font-semibold leading-none text-brand-black/5 select-none pointer-events-none"
+          className="mt-12 text-[18vw] font-serif font-semibold leading-none text-brand-black/5 select-none pointer-events-none"
         >
           DIGIRISE
         </div>

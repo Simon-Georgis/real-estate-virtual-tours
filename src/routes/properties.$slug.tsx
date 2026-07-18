@@ -51,7 +51,7 @@ function PropertyDetail() {
   return (
     <article>
       {/* Header */}
-      <header className="px-6 pt-12 pb-8 md:px-10 md:pt-20 md:pb-12">
+      <header className="px-6 pt-8 pb-8 md:px-10 md:pt-12 md:pb-12">
         <div className="mx-auto max-w-7xl">
           <Link
             to="/properties"
@@ -61,7 +61,7 @@ function PropertyDetail() {
           </Link>
           <div className="grid items-end gap-8 md:grid-cols-2">
             <div>
-              <h1 className="font-serif text-4xl md:text-6xl leading-[1.05]">
+              <h1 className="font-serif text-xl leading-[1.35] md:text-2xl lg:text-3xl">
                 {property.address}
               </h1>
               {property.suburb && (
@@ -112,9 +112,9 @@ function PropertyDetail() {
 
       {/* Gallery */}
       {property.images.length > 0 && (
-        <section className="px-6 py-16 md:px-10 md:py-24">
+        <section className="px-6 py-12 md:px-10 md:py-16">
           <div className="mx-auto max-w-7xl">
-            <h2 className="mb-8 font-serif text-2xl italic md:text-3xl">Gallery</h2>
+            <h2 className="mb-8 font-serif text-xl leading-[1.35] italic md:text-2xl lg:text-3xl">Gallery</h2>
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 md:gap-6">
               {property.images.map((src, i) => (
                 <button
@@ -138,9 +138,9 @@ function PropertyDetail() {
 
       {/* Video */}
       {property.videos && property.videos.length > 0 && (
-        <section className="bg-white px-6 py-16 md:px-10 md:py-24">
+        <section className="bg-white px-6 py-12 md:px-10 md:py-16">
           <div className="mx-auto max-w-6xl">
-            <h2 className="mb-8 font-serif text-2xl italic md:text-3xl">Video</h2>
+            <h2 className="mb-8 font-serif text-xl leading-[1.35] italic md:text-2xl lg:text-3xl">Video</h2>
             <div className="space-y-8">
               {property.videos.map((url, i) => {
                 const embed = toEmbedUrl(url);
@@ -189,12 +189,12 @@ function PropertyDetail() {
 
       {/* Matterport */}
       {property.matterportUrl && (
-        <section className="bg-brand-black px-6 py-16 text-brand-cream md:px-10 md:py-24">
+        <section className="bg-brand-black px-6 py-12 text-brand-cream md:px-10 md:py-16">
           <div className="mx-auto max-w-6xl">
             <p className="text-[10px] uppercase tracking-[0.3em] text-brand-gold">
               Immersive Experience
             </p>
-            <h2 className="mt-3 mb-8 font-serif text-3xl md:text-4xl">
+            <h2 className="mt-3 mb-8 font-serif text-xl leading-[1.35] md:text-2xl lg:text-3xl">
               3D Walkthrough
             </h2>
             <div className="relative aspect-video overflow-hidden rounded-sm border border-brand-cream/10">
@@ -211,9 +211,9 @@ function PropertyDetail() {
       )}
 
       {/* CTA */}
-      <section className="px-6 py-24 md:px-10">
+      <section className="px-6 py-12 md:px-10 md:py-16">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="font-serif text-3xl italic md:text-4xl">Like what you see?</h2>
+          <h2 className="font-serif text-xl leading-[1.35] italic md:text-2xl lg:text-3xl">Like what you see?</h2>
           <p className="mt-4 text-brand-black/60">
             Get in touch to book your own shoot.
           </p>

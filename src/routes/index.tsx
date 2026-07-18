@@ -79,7 +79,7 @@ function Index() {
       <section className="bg-white px-6 py-20 md:px-10">
         <div className="mx-auto max-w-7xl">
           <div className="mb-12 flex flex-wrap items-end justify-between gap-4">
-            <h2 className="font-serif text-3xl italic md:text-4xl">Selected Shoots</h2>
+            <h2 className="font-serif text-xl leading-[1.35] italic md:text-2xl lg:text-3xl">Selected Shoots</h2>
             <Link
               to="/properties"
               className="border-b border-brand-black pb-1 text-xs uppercase tracking-[0.2em] hover:text-brand-gold hover:border-brand-gold transition-colors"
@@ -141,7 +141,7 @@ function Index() {
             <div className="grid gap-12 md:grid-cols-2">
               {SERVICES.map((s) => (
                 <div key={s.title}>
-                  <h4 className="mb-3 font-serif text-xl">{s.title}</h4>
+                  <h4 className="mb-3 font-serif text-xl leading-[1.35] md:text-2xl lg:text-3xl">{s.title}</h4>
                   <p className="text-sm leading-relaxed text-brand-black/70">{s.body}</p>
                 </div>
               ))}
@@ -153,7 +153,7 @@ function Index() {
       {/* Contact strip */}
       <section className="bg-brand-black px-6 py-24 text-brand-cream md:px-10">
         <div className="mx-auto max-w-5xl text-center">
-          <h2 className="font-serif text-2xl md:text-3xl">Let's shoot your next listing.</h2>
+          <h2 className="font-serif text-xl leading-[1.35] md:text-2xl lg:text-3xl">Let's shoot your next listing.</h2>
           <p className="mx-auto mt-4 max-w-xl text-brand-cream/60">
             Address, dates, brief — send them across and Simon will come back with
             availability and a quote.
