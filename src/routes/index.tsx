@@ -34,12 +34,11 @@ function Index() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-16 grid items-end gap-12 md:grid-cols-2 md:gap-16">
             <div>
-              <h1 className="font-serif text-5xl leading-[1.05] text-brand-black md:text-7xl lg:text-8xl">
-                Capturing the <span className="italic">Art</span> of Space.
+              <h1 className="font-serif text-2xl leading-[1.4] text-brand-black md:text-4xl lg:text-5xl">
+                We capture the <span className="italic text-brand-gold">DETAILS.</span> you close the <span className="italic text-brand-gold">DEAL</span>.
               </h1>
               <p className="mt-8 max-w-md text-base leading-relaxed text-brand-black/70 md:text-lg">
-                Simon is a solo operator specialising in premium real estate media —
-                from cinematic drone sequences to immersive Matterport experiences.
+                Your All-In-One Media Partner. From Ground to Air to 360°- We Handle It All
               </p>
               <div className="mt-10 flex flex-wrap gap-6 text-xs uppercase tracking-[0.2em]">
                 <Link
@@ -154,7 +153,7 @@ function Index() {
       {/* Contact strip */}
       <section className="bg-brand-black px-6 py-24 text-brand-cream md:px-10">
         <div className="mx-auto max-w-5xl text-center">
-          <h2 className="font-serif text-4xl md:text-5xl">Let's shoot your next listing.</h2>
+          <h2 className="font-serif text-2xl md:text-3xl">Let's shoot your next listing.</h2>
           <p className="mx-auto mt-4 max-w-xl text-brand-cream/60">
             Address, dates, brief — send them across and Simon will come back with
             availability and a quote.

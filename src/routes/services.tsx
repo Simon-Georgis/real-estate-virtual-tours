@@ -89,7 +89,7 @@ function ServicesPage() {
               to="/contact"
               className="border-b border-brand-cream pb-1 hover:text-brand-gold hover:border-brand-gold transition-colors"
             >
-              Contact Simon
+              Contact Us
             </Link>
             <Link
               to="/properties"

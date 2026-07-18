@@ -9,9 +9,9 @@ export function SiteHeader() {
           <img
             src={logo}
             alt="DigiRise"
-            width={40}
-            height={40}
-            className="h-9 w-9 object-contain"
+            width={64}
+            height={64}
+            className="h-16 w-16 object-contain"
           />
           <span className="font-serif text-xl italic tracking-tight text-brand-black">
             DigiRise

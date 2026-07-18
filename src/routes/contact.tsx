@@ -48,7 +48,7 @@ function ContactPage() {
             Let's shoot your <span className="italic">next</span> listing.
           </h1>
           <p className="mt-6 max-w-xl text-brand-black/70 leading-relaxed">
-            Send through the address, preferred date, and what you need — Simon will come
+            Send through the address, preferred date, and what you need — We will come
             back with availability and a quote.
           </p>
         </div>
@@ -94,7 +94,7 @@ function ContactPage() {
               <br />
               Simon — Principal Operator
               <br />
-              Melbourne, Australia
+              Sydney, Australia
               <br />
               ABN 82 302 930 360
             </p>
@@ -114,7 +114,7 @@ function ContactPage() {
             href="mailto:info@digirise.com.au?subject=Property%20shoot%20enquiry"
             className="mt-8 inline-block bg-brand-black px-8 py-4 text-xs uppercase tracking-[0.2em] text-brand-cream hover:bg-brand-gold hover:text-brand-black transition-colors"
           >
-            Email Simon
+            Email Us
           </a>
         </div>
       </section>
