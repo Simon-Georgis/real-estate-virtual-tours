@@ -10,7 +10,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import logo from "../assets/digirise-logo.png.asset.json";
+import logo from "../assets/digirise-logo.png?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "../components/SiteHeader";
 import { SiteFooter } from "../components/SiteFooter";
@@ -107,7 +107,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap",
       },
-      { rel: "icon", type: "image/png", href: "/__l5e/assets-v1/b76ecdd3-d52a-4ae2-a6c7-6fb73b609a4d/digirise-logo.png" },
+      { rel: "icon", type: "image/png", href: logo },
     ],
   }),
   shellComponent: RootShell,
