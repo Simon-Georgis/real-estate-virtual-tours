@@ -10,6 +10,10 @@ export function toEmbedUrl(url: string): string | null {
     if (host === "youtube.com" || host === "m.youtube.com") {
       const v = u.searchParams.get("v");
       if (v) return `https://www.youtube.com/embed/${v}`;
+      if (u.pathname.startsWith("/shorts/")) {
+        const id = u.pathname.split("/").filter(Boolean)[1];
+        if (id) return `https://www.youtube.com/embed/${id}`;
+      }
     }
     if (host === "youtu.be") {
       const id = u.pathname.slice(1);

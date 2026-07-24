@@ -1,8 +1,3 @@
-import highviewCover from "@/assets/property-highview-cover.jpg";
-import skyloftCover from "@/assets/property-skyloft-cover.jpg";
-import riverbendCover from "@/assets/property-riverbend-cover.jpg";
-import heroPeninsula from "@/assets/hero-peninsula.jpg";
-
 export type Property = {
   slug: string;
   address: string;
@@ -26,36 +21,37 @@ export type Property = {
  */
 export const properties: Property[] = [
   {
-    slug: "42-highview-crescent",
-    address: "42 Highview Crescent",
-    suburb: "Toorak, VIC",
-    cover: highviewCover,
-    images: [highviewCover, riverbendCover, heroPeninsula],
-    services: ["Interior Photography", "Drone", "Cinematic Video"],
-    note: "Full media package for a light-filled contemporary residence.",
-    date: "2026-05-12",
-  },
-  {
-    slug: "the-skyloft-penthouse",
-    address: "The SkyLoft Penthouse",
-    suburb: "Southbank, VIC",
-    cover: skyloftCover,
-    images: [skyloftCover, highviewCover, heroPeninsula],
-    matterportUrl: "https://my.matterport.com/show/?m=SxQL3iGyoDo",
-    services: ["Matterport 3D Tour", "Drone", "Interior Stills"],
-    note: "Immersive 3D walkthrough for a landmark penthouse.",
-    date: "2026-04-02",
-  },
-  {
-    slug: "18-riverbend-mews",
-    address: "18 Riverbend Mews",
-    suburb: "Hawthorn, VIC",
-    cover: riverbendCover,
-    images: [riverbendCover, highviewCover, skyloftCover],
-    videos: ["https://www.youtube.com/watch?v=aqz-KE-bpKQ"],
-    services: ["Interior Photography", "Cinematic Video"],
-    note: "Editorial interiors and a hero walk-through film.",
-    date: "2026-02-20",
+    slug: "57-earl-street-canley-heights-2165-nsw",
+    address: "57 Earl Street",
+    suburb: "Canley Heights, NSW",
+    cover: "/properties/57-earl-street-canley-heights-2165-nsw/Image/front_low_n.jpg",
+    images: [
+      "/properties/57-earl-street-canley-heights-2165-nsw/Image/front_selected.jpg",
+      "/properties/57-earl-street-canley-heights-2165-nsw/Image/back_selected.jpg",
+      "/properties/57-earl-street-canley-heights-2165-nsw/Image/side_selected.jpg",
+      "/properties/57-earl-street-canley-heights-2165-nsw/Image/front_high.jpg",
+      "/properties/57-earl-street-canley-heights-2165-nsw/Image/front_high_n.jpg",
+      "/properties/57-earl-street-canley-heights-2165-nsw/Image/front_low.jpg",
+      "/properties/57-earl-street-canley-heights-2165-nsw/Image/front_low_n.jpg",
+      "/properties/57-earl-street-canley-heights-2165-nsw/Image/front_sky.jpg",
+      "/properties/57-earl-street-canley-heights-2165-nsw/Image/back_high.jpg",
+      "/properties/57-earl-street-canley-heights-2165-nsw/Image/back_high_n.jpg",
+      "/properties/57-earl-street-canley-heights-2165-nsw/Image/back_low.jpg",
+      "/properties/57-earl-street-canley-heights-2165-nsw/Image/back_low_n.jpg",
+      "/properties/57-earl-street-canley-heights-2165-nsw/Image/back_sky.jpg",
+      "/properties/57-earl-street-canley-heights-2165-nsw/Image/side_sky.jpg",
+    ],
+    videos: [
+      "https://youtu.be/LxCYNKohueM",
+      "https://youtu.be/PRZ63Q285zA",
+      "https://youtu.be/wCmg8itDvVQ",
+      "https://www.youtube.com/watch?v=B4ShSE89Tsc",
+      "https://youtube.com/shorts/0d3JgFVOjBI",
+    ],
+    matterportUrl: "https://my.matterport.com/show/?m=SiMTkSpihUc",
+    services: ["Photography", "Cinematic Video", "Matterport 3D Tour"],
+    note: "Full property shoot with photos, edited video, and Matterport 3D tour.",
+    date: "2026-07-24",
   },
 ];
 

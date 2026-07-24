@@ -93,29 +93,12 @@ function PropertyDetail() {
         </div>
       </header>
 
-      {/* Cover */}
-      <section className="px-6 md:px-10">
-        <div className="mx-auto max-w-7xl">
-          <button
-            type="button"
-            onClick={() => setLightbox({ open: true, index: 0 })}
-            className="block w-full overflow-hidden rounded-sm outline outline-1 -outline-offset-1 outline-brand-black/5"
-          >
-            <img
-              src={property.cover}
-              alt={`${property.address} — cover`}
-              className="w-full aspect-[21/9] object-cover"
-            />
-          </button>
-        </div>
-      </section>
-
       {/* Gallery */}
       {property.images.length > 0 && (
         <section className="px-6 py-12 md:px-10 md:py-16">
           <div className="mx-auto max-w-7xl">
             <h2 className="mb-8 font-serif text-xl leading-[1.35] italic md:text-2xl lg:text-3xl">Gallery</h2>
-            <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 md:gap-6">
+            <div className="grid gap-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
               {property.images.map((src, i) => (
                 <button
                   key={src + i}
@@ -141,7 +124,7 @@ function PropertyDetail() {
         <section className="bg-white px-6 py-12 md:px-10 md:py-16">
           <div className="mx-auto max-w-6xl">
             <h2 className="mb-8 font-serif text-xl leading-[1.35] italic md:text-2xl lg:text-3xl">Video</h2>
-            <div className="space-y-8">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {property.videos.map((url, i) => {
                 const embed = toEmbedUrl(url);
                 if (embed) {
@@ -162,12 +145,16 @@ function PropertyDetail() {
                 }
                 if (isDirectVideoFile(url)) {
                   return (
-                    <video
+                    <div
                       key={url + i}
-                      src={url}
-                      controls
-                      className="w-full rounded-sm bg-brand-black"
-                    />
+                      className="relative aspect-video overflow-hidden rounded-sm bg-brand-black"
+                    >
+                      <video
+                        src={url}
+                        controls
+                        className="absolute inset-0 h-full w-full object-cover"
+                      />
+                    </div>
                   );
                 }
                 return (

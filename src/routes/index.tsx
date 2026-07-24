@@ -90,12 +90,7 @@ function Index() {
 
           <div className="grid gap-10 md:grid-cols-3 md:gap-12">
             {featured.map((p) => (
-              <Link
-                key={p.slug}
-                to="/properties/$slug"
-                params={{ slug: p.slug }}
-                className="group block"
-              >
+              <Link key={p.slug} to="/properties/$slug" params={{ slug: p.slug }} className="group block">
                 <div className="mb-6 aspect-[4/5] w-full overflow-hidden rounded-sm outline outline-1 -outline-offset-1 outline-brand-black/5">
                   <img
                     src={p.cover}
