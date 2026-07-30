@@ -1,5 +1,4 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroPeninsula from "@/assets/hero-peninsula.jpg";
 import { getAllProperties } from "@/data/properties";
 
 export const Route = createFileRoute("/")({
@@ -66,11 +65,11 @@ function Index() {
           </div>
 
           <img
-            src={heroPeninsula}
-            alt="Cinematic dusk view of a modern waterfront residence"
-            width={1920}
-            height={1080}
-            className="w-full aspect-[21/9] rounded-sm object-cover outline outline-1 -outline-offset-1 outline-brand-black/5"
+            src="/properties/welcome.jpg"
+            alt="Aerial view of a recent DigiRise property shoot with nearby points of interest marked"
+            width={4032}
+            height={3024}
+            className="w-full aspect-[4/3] rounded-sm object-cover outline outline-1 -outline-offset-1 outline-brand-black/5"
           />
         </div>
       </section>
