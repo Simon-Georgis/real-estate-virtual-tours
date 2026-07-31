@@ -64,13 +64,22 @@ function Index() {
             </div>
           </div>
 
-          <img
-            src="/properties/welcome.jpg"
-            alt="Aerial view of a recent DigiRise property shoot with nearby points of interest marked"
-            width={4032}
-            height={3024}
-            className="w-full aspect-[4/3] rounded-sm object-cover outline outline-1 -outline-offset-1 outline-brand-black/5"
-          />
+          <div className="grid gap-4 md:grid-cols-2 md:gap-6">
+            <img
+              src="/properties/welcome.jpg"
+              alt="Aerial view of a recent DigiRise property shoot with nearby points of interest marked"
+              width={4032}
+              height={3024}
+              className="w-full aspect-[4/3] rounded-sm object-cover outline outline-1 -outline-offset-1 outline-brand-black/5"
+            />
+            <img
+              src="/properties/welcome2-site-plan.jpg"
+              alt="Site plan and floor plan overlay for a recent DigiRise property shoot"
+              width={4032}
+              height={3024}
+              className="w-full aspect-[4/3] rounded-sm object-cover outline outline-1 -outline-offset-1 outline-brand-black/5"
+            />
+          </div>
         </div>
       </section>
 
