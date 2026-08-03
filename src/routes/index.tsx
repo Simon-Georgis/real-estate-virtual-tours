@@ -1,5 +1,28 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useState } from "react";
 import { getAllProperties } from "@/data/properties";
+import { Lightbox } from "@/components/Lightbox";
+
+const SHOWCASE_SHOTS = [
+  {
+    src: "/properties/welcome.jpg",
+    alt: "Aerial view of a recent DigiRise property shoot with nearby points of interest marked",
+    width: 4032,
+    height: 3024,
+  },
+  {
+    src: "/properties/welcome2-site-plan.jpg",
+    alt: "Site plan and floor plan overlay for a recent DigiRise property shoot",
+    width: 4032,
+    height: 3024,
+  },
+  {
+    src: "/properties/8-corona-rd-annotated.jpg",
+    alt: "Aerial view with the property boundary line highlighted",
+    width: 8064,
+    height: 6048,
+  },
+];
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -25,6 +48,10 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const featured = getAllProperties().slice(0, 3);
+  const [lightbox, setLightbox] = useState<{ open: boolean; index: number }>({
+    open: false,
+    index: 0,
+  });
 
   return (
     <>
@@ -64,21 +91,27 @@ function Index() {
             </div>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-2 md:gap-6">
-            <img
-              src="/properties/welcome.jpg"
-              alt="Aerial view of a recent DigiRise property shoot with nearby points of interest marked"
-              width={4032}
-              height={3024}
-              className="w-full aspect-[4/3] rounded-sm object-cover outline outline-1 -outline-offset-1 outline-brand-black/5"
-            />
-            <img
-              src="/properties/welcome2-site-plan.jpg"
-              alt="Site plan and floor plan overlay for a recent DigiRise property shoot"
-              width={4032}
-              height={3024}
-              className="w-full aspect-[4/3] rounded-sm object-cover outline outline-1 -outline-offset-1 outline-brand-black/5"
-            />
+          <p className="mb-4 text-[10px] uppercase tracking-[0.3em] text-brand-gold">
+            One Shoot, Fully Mapped — Aerial · Boundary Lines · Floor Plan
+          </p>
+          <div className="grid gap-4 md:grid-cols-3 md:gap-6">
+            {SHOWCASE_SHOTS.map((shot, i) => (
+              <button
+                key={shot.src}
+                type="button"
+                onClick={() => setLightbox({ open: true, index: i })}
+                className="group overflow-hidden rounded-sm outline outline-1 -outline-offset-1 outline-brand-black/5"
+              >
+                <img
+                  src={shot.src}
+                  alt={shot.alt}
+                  width={shot.width}
+                  height={shot.height}
+                  loading={i === 0 ? undefined : "lazy"}
+                  className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                />
+              </button>
+            ))}
           </div>
         </div>
       </section>
@@ -177,6 +210,14 @@ function Index() {
           </div>
         </div>
       </section>
+
+      <Lightbox
+        open={lightbox.open}
+        startIndex={lightbox.index}
+        images={SHOWCASE_SHOTS.map((s) => s.src)}
+        onClose={() => setLightbox({ open: false, index: 0 })}
+        alt="DigiRise property mapping showcase"
+      />
     </>
   );
 }
