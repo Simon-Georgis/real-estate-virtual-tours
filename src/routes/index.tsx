@@ -128,26 +128,13 @@ function Index() {
         </div>
       </section>
 
-      {/* As used by local agents */}
+      {/* Signage */}
       <section className="border-t border-brand-black/5 bg-white px-6 py-20 md:px-10">
         <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-2 md:items-center md:gap-16">
           <div>
-            <p className="text-[10px] uppercase tracking-[0.3em] text-brand-gold">
-              As Used By Local Agents
-            </p>
-            <h2 className="mt-3 font-serif text-xl leading-[1.35] italic md:text-2xl lg:text-3xl">
-              From drone shot to sold sign.
+            <h2 className="font-serif text-xl leading-[1.35] italic md:text-2xl lg:text-3xl">
+              We design signage.
             </h2>
-            <p className="mt-4 max-w-md text-brand-black/70 leading-relaxed">
-              The aerial photo, boundary lines and 360° tour on this listing were shot
-              and mapped by DigiRise, then used directly by Richard Chhor at
-              Professionals Cabramatta to market 57 Earl Street, Canley Heights — QR
-              code included, linking straight to the tour inside.
-            </p>
-            <p className="mt-4 max-w-md text-brand-black/70 leading-relaxed">
-              DigiRise can design, print and install the yard sign too — with a QR code
-              leading buyers straight to your listing or the 360° tour we shot.
-            </p>
             <Link
               to="/signage-styles"
               className="mt-6 inline-block border-b border-brand-black pb-1 text-xs uppercase tracking-[0.2em] hover:text-brand-gold hover:border-brand-gold transition-colors"
