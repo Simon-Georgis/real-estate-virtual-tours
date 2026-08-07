@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SignageStylesRouteImport } from './routes/signage-styles'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as PropertiesRouteImport } from './routes/properties'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -16,6 +17,11 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as PropertiesIndexRouteImport } from './routes/properties.index'
 import { Route as PropertiesSlugRouteImport } from './routes/properties.$slug'
 
+const SignageStylesRoute = SignageStylesRouteImport.update({
+  id: '/signage-styles',
+  path: '/signage-styles',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
@@ -52,6 +58,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/properties': typeof PropertiesRouteWithChildren
   '/services': typeof ServicesRoute
+  '/signage-styles': typeof SignageStylesRoute
   '/properties/$slug': typeof PropertiesSlugRoute
   '/properties/': typeof PropertiesIndexRoute
 }
@@ -59,6 +66,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
   '/services': typeof ServicesRoute
+  '/signage-styles': typeof SignageStylesRoute
   '/properties/$slug': typeof PropertiesSlugRoute
   '/properties': typeof PropertiesIndexRoute
 }
@@ -68,6 +76,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/properties': typeof PropertiesRouteWithChildren
   '/services': typeof ServicesRoute
+  '/signage-styles': typeof SignageStylesRoute
   '/properties/$slug': typeof PropertiesSlugRoute
   '/properties/': typeof PropertiesIndexRoute
 }
@@ -78,16 +87,24 @@ export interface FileRouteTypes {
     | '/contact'
     | '/properties'
     | '/services'
+    | '/signage-styles'
     | '/properties/$slug'
     | '/properties/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contact' | '/services' | '/properties/$slug' | '/properties'
+  to:
+    | '/'
+    | '/contact'
+    | '/services'
+    | '/signage-styles'
+    | '/properties/$slug'
+    | '/properties'
   id:
     | '__root__'
     | '/'
     | '/contact'
     | '/properties'
     | '/services'
+    | '/signage-styles'
     | '/properties/$slug'
     | '/properties/'
   fileRoutesById: FileRoutesById
@@ -97,10 +114,18 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   PropertiesRoute: typeof PropertiesRouteWithChildren
   ServicesRoute: typeof ServicesRoute
+  SignageStylesRoute: typeof SignageStylesRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/signage-styles': {
+      id: '/signage-styles'
+      path: '/signage-styles'
+      fullPath: '/signage-styles'
+      preLoaderRoute: typeof SignageStylesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services': {
       id: '/services'
       path: '/services'
@@ -165,6 +190,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   PropertiesRoute: PropertiesRouteWithChildren,
   ServicesRoute: ServicesRoute,
+  SignageStylesRoute: SignageStylesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -4,17 +4,17 @@ export const Route = createFileRoute("/services")({
   component: ServicesPage,
   head: () => ({
     meta: [
-      { title: "Services — DigiRise Real Estate Media" },
+      { title: "Services — DigiRise Real Estate Media, Fairfield" },
       {
         name: "description",
         content:
-          "Photography, drone photo & video, 360° Matterport walkthroughs, and cinematic property video by DigiRise.",
+          "360° Matterport walkthroughs, photography, drone photo & video, and cinematic property video for Fairfield, Canley Heights, Cabramatta, Bossley Park, Smithfield & Wetherill Park.",
       },
-      { property: "og:title", content: "Services — DigiRise" },
+      { property: "og:title", content: "Services — DigiRise, Fairfield" },
       {
         property: "og:description",
         content:
-          "Photography, drone, 360° Matterport walkthroughs, and cinematic property video.",
+          "360° Matterport walkthroughs, photography, drone, and cinematic property video for Western Sydney.",
       },
       { property: "og:url", content: "/services" },
     ],
@@ -25,18 +25,18 @@ export const Route = createFileRoute("/services")({
 const SERVICES = [
   {
     number: "01",
+    title: "360° Matterport 3D Tours",
+    body: "Industry-standard immersive walkthroughs that let prospective buyers explore every corner of a home from any device — the closest thing to being there.",
+  },
+  {
+    number: "02",
     title: "Interior & Exterior Photography",
     body: "Ultra-wide angle stills of every room, plus considered detail shots and exterior compositions using natural light and careful HDR blending for magazine-quality results.",
   },
   {
-    number: "02",
+    number: "03",
     title: "Drone Photo & Video",
     body: "CASA-certified aerial operations for stunning 4K context shots, low-altitude reveals, and dramatic overhead compositions that show a property's true position.",
-  },
-  {
-    number: "03",
-    title: "360° Matterport 3D Tours",
-    body: "Industry-standard immersive walkthroughs that let prospective buyers explore every corner of a home from any device — the closest thing to being there.",
   },
   {
     number: "04",

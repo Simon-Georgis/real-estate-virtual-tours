@@ -61,7 +61,7 @@ export function SiteFooter() {
               ABN 82 302 930 360
             </p>
             <p className="text-[10px] uppercase tracking-[0.2em] text-brand-black/40">
-              Sydney, AU
+              Fairfield, Western Sydney
             </p>
             <p className="text-[10px] uppercase tracking-[0.2em] text-brand-black/30 pt-4">
               © {new Date().getFullYear()} DigiRise Media

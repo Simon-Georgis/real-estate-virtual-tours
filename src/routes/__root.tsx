@@ -78,24 +78,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "DigiRise — Real Estate Photography, Sydney" },
+      { title: "DigiRise — Real Estate Photography, Fairfield & Western Sydney" },
       {
         name: "description",
         content:
-          "Premium real estate photography, drone, and 360° Matterport tours. Based in Sydney.",
+          "Real estate photography, drone & 360° Matterport tours for Fairfield, Canley Heights, Cabramatta, Bossley Park, Smithfield & Wetherill Park. English, Arabic & Assyrian spoken.",
       },
       { name: "author", content: "DigiRise" },
       { property: "og:site_name", content: "DigiRise" },
       { property: "og:type", content: "website" },
-      { property: "og:title", content: "DigiRise — Real Estate Photography, Sydney" },
+      { property: "og:title", content: "DigiRise — Real Estate Photography, Fairfield & Western Sydney" },
       {
         property: "og:description",
         content:
-          "Premium real estate photography, drone, and 360° Matterport tours. Based in Sydney.",
+          "Real estate photography, drone & 360° Matterport tours for Fairfield, Canley Heights, Cabramatta, Bossley Park, Smithfield & Wetherill Park. English, Arabic & Assyrian spoken.",
       },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "DigiRise — Real Estate Photography, Sydney" },
-      { name: "twitter:description", content: "Premium real estate photography, drone, and 360° Matterport tours. Based in Sydney." },
+      { name: "twitter:title", content: "DigiRise — Real Estate Photography, Fairfield & Western Sydney" },
+      { name: "twitter:description", content: "Real estate photography, drone & 360° Matterport tours for Fairfield, Canley Heights, Cabramatta, Bossley Park, Smithfield & Wetherill Park. English, Arabic & Assyrian spoken." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9039b1c8-908d-46bb-9eac-fb46996bfa28/id-preview-bbfce025--cc0a5f5d-05f1-4a28-b0c5-20c431f47152.lovable.app-1784295041716.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9039b1c8-908d-46bb-9eac-fb46996bfa28/id-preview-bbfce025--cc0a5f5d-05f1-4a28-b0c5-20c431f47152.lovable.app-1784295041716.png" },
     ],

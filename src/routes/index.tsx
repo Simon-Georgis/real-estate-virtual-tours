@@ -28,17 +28,17 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "DigiRise — Real Estate Photography, Sydney" },
+      { title: "DigiRise — Real Estate Photography, Fairfield & Western Sydney" },
       {
         name: "description",
         content:
-          "Premium real estate photography, drone, and 360° Matterport tours. Based in Sydney.",
+          "Real estate photography, drone & 360° Matterport tours for Fairfield, Canley Heights, Cabramatta, Bossley Park, Smithfield & Wetherill Park. English, Arabic & Assyrian spoken.",
       },
-      { property: "og:title", content: "DigiRise — Real Estate Photography, Sydney" },
+      { property: "og:title", content: "DigiRise — Real Estate Photography, Fairfield & Western Sydney" },
       {
         property: "og:description",
         content:
-          "Premium real estate photography, drone, and 360° Matterport tours. Based in Sydney.",
+          "Real estate photography, drone & 360° Matterport tours for Fairfield, Canley Heights, Cabramatta, Bossley Park, Smithfield & Wetherill Park. English, Arabic & Assyrian spoken.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -52,6 +52,7 @@ function Index() {
     open: false,
     index: 0,
   });
+  const [signOpen, setSignOpen] = useState(false);
 
   return (
     <>
@@ -66,6 +67,17 @@ function Index() {
               <p className="mt-8 max-w-md text-base leading-relaxed text-brand-black/70 md:text-lg">
                 Your All-In-One Media Partner. From Ground to Air to 360°- We Handle It All
               </p>
+              <p className="mt-4 text-xs uppercase tracking-[0.2em] text-brand-black/50">
+                Fairfield · Canley Heights · Cabramatta · Bossley Park · Smithfield · Wetherill Park
+              </p>
+              <div className="mt-6 inline-flex flex-wrap items-center gap-x-3 gap-y-1 rounded-full border border-brand-gold/30 px-4 py-2 text-sm text-brand-black/80">
+                <span className="text-brand-black/50">We speak</span>
+                <span className="font-medium">English</span>
+                <span className="text-brand-black/30">·</span>
+                <span className="font-medium">Arabic</span>
+                <span className="text-brand-black/30">·</span>
+                <span className="font-medium">Assyrian</span>
+              </div>
               <div className="mt-10 flex flex-wrap gap-6 text-xs uppercase tracking-[0.2em]">
                 <Link
                   to="/properties"
@@ -86,7 +98,7 @@ function Index() {
                 <p className="text-[10px] uppercase tracking-[0.3em] text-brand-black/50">
                   Based in
                 </p>
-                <p className="mt-2 text-sm">Sydney, Australia</p>
+                <p className="mt-2 text-sm">Fairfield, Western Sydney</p>
               </div>
             </div>
           </div>
@@ -113,6 +125,50 @@ function Index() {
               </button>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* As used by local agents */}
+      <section className="border-t border-brand-black/5 bg-white px-6 py-20 md:px-10">
+        <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-2 md:items-center md:gap-16">
+          <div>
+            <p className="text-[10px] uppercase tracking-[0.3em] text-brand-gold">
+              As Used By Local Agents
+            </p>
+            <h2 className="mt-3 font-serif text-xl leading-[1.35] italic md:text-2xl lg:text-3xl">
+              From drone shot to sold sign.
+            </h2>
+            <p className="mt-4 max-w-md text-brand-black/70 leading-relaxed">
+              The aerial photo, boundary lines and 360° tour on this listing were shot
+              and mapped by DigiRise, then used directly by Richard Chhor at
+              Professionals Cabramatta to market 57 Earl Street, Canley Heights — QR
+              code included, linking straight to the tour inside.
+            </p>
+            <p className="mt-4 max-w-md text-brand-black/70 leading-relaxed">
+              DigiRise can design, print and install the yard sign too — with a QR code
+              leading buyers straight to your listing or the 360° tour we shot.
+            </p>
+            <Link
+              to="/signage-styles"
+              className="mt-6 inline-block border-b border-brand-black pb-1 text-xs uppercase tracking-[0.2em] hover:text-brand-gold hover:border-brand-gold transition-colors"
+            >
+              See Signage Style Options
+            </Link>
+          </div>
+          <button
+            type="button"
+            onClick={() => setSignOpen(true)}
+            className="group mx-auto w-full max-w-xs overflow-hidden rounded-sm outline outline-1 -outline-offset-1 outline-brand-black/5"
+          >
+            <img
+              src="/signage/57-earl-st-sign.jpg"
+              alt="57 Earl Street, Canley Heights — For Sale sign by Professionals Cabramatta featuring DigiRise aerial photography and 360° tour QR code"
+              width={1698}
+              height={2400}
+              loading="lazy"
+              className="w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+            />
+          </button>
         </div>
       </section>
 
@@ -164,7 +220,7 @@ function Index() {
               Services
             </h2>
             <p className="text-sm font-light leading-relaxed text-brand-black/60">
-              Precision media designed to move high-value real estate faster.
+              Precision media that helps Fairfield &amp; Western Sydney agents move listings faster.
             </p>
             <Link
               to="/services"
@@ -218,11 +274,23 @@ function Index() {
         onClose={() => setLightbox({ open: false, index: 0 })}
         alt="DigiRise property mapping showcase"
       />
+
+      <Lightbox
+        open={signOpen}
+        startIndex={0}
+        images={["/signage/57-earl-st-sign.jpg"]}
+        onClose={() => setSignOpen(false)}
+        alt="57 Earl Street, Canley Heights — For Sale sign by Professionals Cabramatta"
+      />
     </>
   );
 }
 
 const SERVICES = [
+  {
+    title: "360° Matterport Tours",
+    body: "Industry-standard immersive walkthroughs that let buyers explore every corner from their own device.",
+  },
   {
     title: "Interior & Exterior Stills",
     body: "Ultra-wide and detail shots using natural light and HDR blending for magazine-quality property photography.",
@@ -230,10 +298,6 @@ const SERVICES = [
   {
     title: "Drone Photo & Video",
     body: "CASA-certified aerial operations for breathtaking 4K site context and dramatic low-altitude reveals.",
-  },
-  {
-    title: "360° Matterport Tours",
-    body: "Industry-standard immersive walkthroughs that let buyers explore every corner from their own device.",
   },
   {
     title: "Cinematic Video",

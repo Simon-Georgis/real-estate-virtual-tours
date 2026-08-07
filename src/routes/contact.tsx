@@ -8,7 +8,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Contact Simon at DigiRise — phone 0432 436 658, email info@digirise.com.au. Real estate photography, drone, and 360° Matterport tours.",
+          "Contact Simon at DigiRise — phone 0432 436 658, email info@digirise.com.au. Real estate photography, drone & 360° Matterport tours for Fairfield and Western Sydney. English, Arabic & Assyrian spoken.",
       },
       { property: "og:title", content: "Contact — DigiRise" },
       {
@@ -27,8 +27,21 @@ export const Route = createFileRoute("/contact")({
           name: "DigiRise Real Estate Media",
           telephone: "+61432436658",
           email: "info@digirise.com.au",
-          areaServed: "AU",
-          address: { "@type": "PostalAddress", addressCountry: "AU" },
+          areaServed: [
+            "Fairfield NSW",
+            "Canley Heights NSW",
+            "Cabramatta NSW",
+            "Bossley Park NSW",
+            "Smithfield NSW",
+            "Wetherill Park NSW",
+          ],
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Fairfield",
+            addressRegion: "NSW",
+            addressCountry: "AU",
+          },
+          knowsLanguage: ["en", "ar", "aii"],
           identifier: { "@type": "PropertyValue", name: "ABN", value: "82 302 930 360" },
         }),
       },
@@ -51,6 +64,17 @@ function ContactPage() {
             Send through the address, preferred date, and what you need — We will come
             back with availability and a quote.
           </p>
+          <p className="mt-4 text-xs uppercase tracking-[0.2em] text-brand-black/50">
+            Fairfield · Canley Heights · Cabramatta · Bossley Park · Smithfield · Wetherill Park
+          </p>
+          <div className="mt-6 inline-flex flex-wrap items-center gap-x-3 gap-y-1 rounded-full border border-brand-gold/30 px-4 py-2 text-sm text-brand-black/80">
+            <span className="text-brand-black/50">We speak</span>
+            <span className="font-medium">English</span>
+            <span className="text-brand-black/30">·</span>
+            <span className="font-medium">Arabic</span>
+            <span className="text-brand-black/30">·</span>
+            <span className="font-medium">Assyrian</span>
+          </div>
         </div>
       </section>
 
@@ -94,7 +118,9 @@ function ContactPage() {
               <br />
               Simon — Principal Operator
               <br />
-              Sydney, Australia
+              Fairfield, Western Sydney
+              <br />
+              English, Arabic &amp; Assyrian spoken
               <br />
               ABN 82 302 930 360
             </p>
